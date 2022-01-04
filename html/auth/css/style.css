@@ -1,0 +1,70 @@
+.register{
+    background: #eeeeee;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    box-shadow: 2px 2px 10px green, -2px 2px 10px pink, 2px -2px 10px pink;
+    z-index: 10000;
+}
+.register input[type=text]{
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    top: 20%;
+    bottom: 70%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transition: transform 0.5s;
+    border: 0;
+}
+.register input[type=text]:focus{
+    transform: scale(1.05);
+}
+.register input[type=password]{
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    top: 35%;
+    bottom: 46%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transition: transform 0.5s;
+    border: 0;
+}
+.register input[type=password]:focus{
+    transform: scale(1.05);
+}
+.register input[type=submit]{
+    background: lightgreen;
+    color: white;
+    font-size: 15px;
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 57%;
+    bottom: 35%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 0;
+}
+p{
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    color: lightblue;
+}
+p a{
+    color: green;
+    text-decoration: none;
+}
+p a:hover{
+    color: blue;
+}

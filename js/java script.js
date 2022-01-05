@@ -3,6 +3,10 @@ function openMenu() {
         document.getElementById("sidebar").classList.toggle('active'); 
     }
 
+
+const menu = document.getElementById('sidebar');
+// menu.addEventListener('click', )
+
 /* game flappy bird */
 /*var cvs = document.getElementById("canvas");
 var ctx = cvs.get.Context("2d");

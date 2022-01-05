@@ -121,7 +121,7 @@ footer {
 }
 
 .siteBody {
-    margin: 50% 2%;
+    margin: 0 5% 2% 5%;
     border: 2px solid silver;
     border-radius: 20px;
     background-color: #f7f7f7;
@@ -185,6 +185,7 @@ div #langs {
 
 /* Menu */
 #sidebar {
+    z-index: 100;
     margin-top: -10px;
     position: fixed;
     width: 250px;
@@ -198,9 +199,13 @@ div #langs {
         transition: all 600ms;
 }
 
-#sidebar:hover {
+#sidebar.active {
     left: 0px;
 }
+/* 
+#sidebar:hover {
+    left: 0px;
+} */
 
 #sidebar ul li:first-child {
     text-align: center;
@@ -255,46 +260,214 @@ div #langs {
 }
 
 .toggle-btn ul li a:hover {
-    background-color: #4a4a4a;
+    background-color: #ffffff7a;
 }
 
 /* animations */
+#transparentation {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 9;
+}
+
+.transparentation {
+    background-color: black;
+}
+
 #lang {
-    height: 400px;
+    height: 600px;
 }
 
 .main {
     position: relative;
-    width: 470px;
-    height: 570px;
+    width: 700px;
+    height: 800px;
     background-color: transparent;
-    transform: scale(0.4) rotate(-30deg) skew(25deg);
+    transform: scale(.8);
+    box-sizing: border-box;
+    display: flex;
 }
 
 .main img {
+    justify-content: space-around;
+    align-items: center;
     position: absolute;
     width: 100%;
+    /* height: 100%; */
     transition: 0.5s;
 }
 
-.main:hover img:nth-child(4) {
-    transform: translate(200px, -200px);
+/* .main:hover #sur4 {
+    transform: translate(0px, -200px);
     opacity: 1;
 }
 
-.main:hover img:nth-child(3) {
+.main:hover #sur3 {
     transform: translate(150px, -150px);
     opacity: .8;
 }
 
-.main:hover img:nth-child(2) {
+.main:hover #sur2 {
     transform: translate(100px, -100px);
     opacity: .6;
 }
 
-.main:hover img:nth-child(1) {
+.main:hover #sur1 {
     transform: translate(50px, -50px);
     opacity: .4;
+} */
+
+@keyframes pic-change {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: .4;
+    }
+
+    17% {
+        transform: translate(0px, -50px);
+        opacity: .4;
+    }
+
+    34% {
+        transform: translate(-100px, 0px);
+        opacity: .4;
+    }
+
+    51% {
+        transform: translate(0px, 50px);
+        opacity: .4;
+    }
+
+    68% {
+        transform: translate(100px, 0px);
+        opacity: .4;
+    }
+
+    85% {
+        transform: translate(0px, -50px);
+        opacity: .4;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: .4;
+    }
+    
+}
+
+@keyframes pic-change2 {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: .6;
+    }
+
+    17% {
+        transform: translate(0px, -100px);
+        opacity: .6;
+    }
+
+    34% {
+        transform: translate(-200px, 0px);
+        opacity: .6;
+    }
+
+    51% {
+        transform: translate(0px, 100px);
+        opacity: .6;
+    }
+
+    68% {
+        transform: translate(200px, 0px);
+        opacity: .6;
+    }
+
+    85% {
+        transform: translate(0px, -100px);
+        opacity: .6;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: .6;
+    }
+    
+}
+
+@keyframes pic-change3 {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: .8;
+    }
+
+    17% {
+        transform: translate(0px, -150px);
+        opacity: .8;
+    }
+
+    34% {
+        transform: translate(-300px, 0px);
+        opacity: .8;
+    }
+
+    51% {
+        transform: translate(0px, 150px);
+        opacity: .8;
+    }
+
+    68% {
+        transform: translate(300px, 0px);
+        opacity: .8;
+    }
+
+    85% {
+        transform: translate(0px, -150px);
+        opacity: .8;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: .8;
+    }
+    
+}
+
+@keyframes pic-change4 {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+
+    17% {
+        transform: translate(0px, -200px);
+        opacity: 1;
+    }
+
+    34% {
+        transform: translate(-400px, 0px);
+        opacity: 1;
+    }
+
+    51% {
+        transform: translate(0px, 200px);
+        opacity: 1;
+    }
+
+    68% {
+        transform: translate(400px, 0px);
+        opacity: 1;
+    }
+
+    85% {
+        transform: translate(0px, -200px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    
 }
 
 /* 3d animation */
@@ -345,23 +518,33 @@ article span img {
 }
 
 /*hover animation*/
+/* #sport {
+
+} */
+
 .sportAnimations {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em; */
+    /* margin-left: 5%;
+    margin-bottom: 5%; */
+    box-sizing: border-box;
+    margin-top: 2%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    box-sizing: border-box;
-    justify-content: center;
-    margin-top: 2%;
 }
 
 .dws-wrapper {
-    position: relative;
-    top: 50%;
+    
+    /* position: relative; */
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+     */
 }
 
 .boxImg {

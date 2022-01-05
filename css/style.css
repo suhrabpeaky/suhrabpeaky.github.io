@@ -279,6 +279,10 @@ div #langs {
     height: 600px;
 }
 
+#about {
+    margin-top: 2%;
+}
+
 .main {
     position: relative;
     width: 700px;

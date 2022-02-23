@@ -219,7 +219,7 @@ input {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-bottom: 50px;
+        padding-bottom: 50px;
     }
 
     .img_icon_div {
@@ -277,7 +277,7 @@ input {
 
     .btn {
         width: 100%;
-        margin-bottom: 40px;
+        padding-bottom: 40px;
         border-radius: 30px;
     }
 
@@ -311,7 +311,7 @@ input {
 
     .btn {
         width: 100%;
-        margin-bottom: 40px;
+        padding-bottom: 40px;
         border-radius: 30px;
     }
 
@@ -320,7 +320,7 @@ input {
     }
 
     .boxes {
-        margin-top: 60px;
+        padding-top: 60px;
         width: 100%;
     }
 
@@ -332,7 +332,7 @@ input {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-bottom: 50px;
+        padding-bottom: 50px;
     }
 
     /* .img_icon_div {

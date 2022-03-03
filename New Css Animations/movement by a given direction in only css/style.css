@@ -1,0 +1,59 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: anim 30s linear infinite;
+}
+
+.sputnik {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    display: inline-block;
+    width: 60px;
+    offset-path: path('M350.379 125.417C350.379 159.731 330.908 190.844 299.332 213.398C267.757 235.952 224.112 249.917 175.879 249.917C127.646 249.917 84.0005 235.952 52.4258 213.398C20.8502 190.844 1.37891 159.731 1.37891 125.417C1.37891 91.1026 20.8502 59.9895 52.4258 37.4355C84.0005 14.8821 127.646 0.916977 175.879 0.916977C224.112 0.916977 267.757 14.8821 299.332 37.4355C330.908 59.9895 350.379 91.1026 350.379 125.417Z');
+    /* offset-rotate: -90deg reverse; */
+    offset-rotate: auto 90deg;
+    animation: move 7s linear infinite;
+}
+
+.earth {
+    width: 150px;
+    height: auto;
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes move {
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes anim {
+    100% {
+        transform: rotate(360deg);
+    }
+}

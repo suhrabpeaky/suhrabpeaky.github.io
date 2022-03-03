@@ -1,0 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: url('vendor/howtodoit_07_files/img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover, 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.ropes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 30px;
+}
+
+.rope1 {
+    /* transform: translateX(-30px) translateY(-30px); */
+    width: 900px;
+    height: auto;
+}
